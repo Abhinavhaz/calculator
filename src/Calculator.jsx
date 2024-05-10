@@ -22,12 +22,12 @@ function Calculator() {
 
   const Clear = () => {
     setInput("");
-    setResult("");
+    setResult(null);
   };
   return (
     <div>
       <h2>React Calculator </h2>
-      <input value={input} />
+      <input type="text" value={input} readOnly />
 
       <h4>value:{result} </h4>
 
@@ -44,7 +44,9 @@ function Calculator() {
         <button className="button" onClick={() => handlebutton("+")}>
           +
         </button>
-        <br />
+        </div>
+        {/* <br /> */}
+        <div>
         <button className="button" onClick={() => handlebutton(4)}>
           4
         </button>
@@ -57,8 +59,10 @@ function Calculator() {
         <button className="button" onClick={() => handlebutton("-")}>
           -
         </button>
-        <br />
-
+        </div>
+        {/* <br />
+         */}
+       <div>
         <button className="button" onClick={() => handlebutton(1)}>
           1
         </button>
@@ -71,7 +75,9 @@ function Calculator() {
         <button className="button" onClick={() => handlebutton("*")}>
           *
         </button>
-        <br />
+        </div>
+        {/* <br /> */}
+        <div>
 
         <button className="button" onClick={Clear}>
           C
@@ -85,7 +91,8 @@ function Calculator() {
         <button className="button" onClick={() => handlebutton("/")}>
           /
         </button>
-      </div>
+        </div>
+      
     </div>
   );
 }
