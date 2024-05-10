@@ -4,7 +4,7 @@ import "./App.css";
 
 function Calculator() {
   const [input, setInput] = useState("");
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState("0");
 
   const handlebutton = (value) => {
     setInput(input + value);
@@ -29,7 +29,7 @@ function Calculator() {
       <h2>React Calculator </h2>
       <input value={input} />
 
-      <h4> {result} </h4>
+      <h4>value:{result} </h4>
 
       <div>
         <button className="button" onClick={() => handlebutton(7)}>
